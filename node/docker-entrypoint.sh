@@ -6,4 +6,4 @@
 echo "running as '$(whoami)'"
 echo "running in '$(pwd)'"
 
-nodemon .
+nodemon --exec 'yarn start'

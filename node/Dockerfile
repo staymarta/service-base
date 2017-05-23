@@ -19,7 +19,10 @@ RUN apk add --no-cache curl && \
   mv /opt/dist /opt/yarn && \
   ln -s /opt/yarn/bin/yarn /usr/local/bin && \
   apk del --purge curl
-  
+
+# Add nodemon
+RUN yarn global add nodemon
+
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD [ "/usr/bin/docker-entrypoint" ]
 
